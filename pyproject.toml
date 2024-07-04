@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "tiltboard"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Korty <ajk@ajk.beer>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+gunicorn = "^21.2.0"
+inotify = "^0.2.10"
+
+[tool.poetry.scripts]
+tb-recv = "tiltboard.receive:main"
+tb-pub = "tiltboard.publish:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

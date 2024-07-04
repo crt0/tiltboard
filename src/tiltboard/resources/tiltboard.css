@@ -1,0 +1,20 @@
+.gravity, .temp {
+    font: 120pt "Gill Sans", sans-serif;
+}
+
+.minor {
+    font: 24pt "Helvetica", sans-serif;
+}
+
+.minor th {
+    text-align: left;
+    font-weight: normal;
+}
+
+.tiny {
+    font: 12pt "Helvetica", sans-serif;
+}
+
+.title {
+    font: 48pt "Gill Sans", sans-serif;
+}

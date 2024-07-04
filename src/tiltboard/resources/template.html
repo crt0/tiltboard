@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/tilt/tilt.css" />
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="/tilt/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="/tilt/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/tilt/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="refresh" content="{refresh:d}" />
+    <title>{beer}</title>
+  </head>
+  <body>
+    <div class="title">{beer}</div>
+    <img src="plot.png" />
+    <div class="gravity">{gravity:.1f}&deg;P</div>
+    <div class="temp">{temp:.0f}&deg;F</div>
+    <table>
+      <tbody class="minor">
+        <tr><th>OG:</th><td>{og:.1f}&deg;P</td></tr>
+        <tr><th>ABV:</th><td>{abv:.1f}%</td></tr>
+        <tr><th>Duration:</th><td>{duration:.1f} days</td></tr>
+        <tr><th>Attenuation:</th><td>{attenuation:.0f}%</td></tr>
+        <tr><th>Rate:</th><td>{rate:.1f}&deg;P/day</td></tr>
+        <tr><th>Plateau:</th><td>{plateau:.1f} hours</td></tr>
+      </tbody>
+    </table>
+    <div class="tiny">Last telemetry: {last_telem}</div>
+    <div class="tiny"><a href="data.txt">Data</a></div>
+    <div class="tiny"><a href="..">Other Fermentations</a></div>
+  </body>
+</html>

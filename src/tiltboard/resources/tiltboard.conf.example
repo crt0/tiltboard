@@ -1,0 +1,5 @@
+[general]
+pub_base = /var/www/tilt
+recv_base = /var/www/tilt-{nonce}
+timezone = America/Indiana/Indianapolis
+url = https://ajk.beer/tilt/
