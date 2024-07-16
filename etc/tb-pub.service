@@ -1,0 +1,17 @@
+[Unit]
+Description=tiltboard publish daemon
+
+[Service]
+Type=exec
+User=nginx
+Group=nginx
+RuntimeDirectory=tb-pub
+WorkingDirectory=/var/www/tilt
+ExecStart=/usr/local/bin/tb-pub
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=5
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

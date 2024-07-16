@@ -1,0 +1,9 @@
+[Unit]
+Description=tiltboard receive socket
+
+[Socket]
+ListenStream=/run/tb-recv.sock
+SocketUser=nginx
+
+[Install]
+WantedBy=sockets.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=tiltboard receive daemon
+Requires=tb-recv.socket
+After=network.target
+
+[Service]
+Type=notify
+User=nginx
+Group=nginx
+RuntimeDirectory=tb-recv
+WorkingDirectory=/var/www/tilt
+ExecStart=/usr/local/bin/tb-recv
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=5
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
