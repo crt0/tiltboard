@@ -11,3 +11,5 @@ Tiltboard consists of two parts: a receiver (`tb-recv`) that receives
 and processes data via the web from the Tilt app, and a publisher
 (`tb-pub`) that publishes the data as static HTML for human
 consumption.
+
+![image](https://github.com/user-attachments/assets/3997e32b-1b45-4f84-b9b1-2c8dc29162ff)
