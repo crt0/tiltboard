@@ -11,7 +11,23 @@
   </head>
   <body>
     <div class="title">{beer}</div>
-    <img src="plot.png" />
+    <figure>
+      <picture>
+        <source media="(max-width: 376px)"
+                srcset="plot-376x282.png">
+        <source media="(max-width: 992px)"
+                srcset="plot-992x744.png">
+        <source media="(max-width: 1400px)"
+                srcset="plot-1400x1200.png">
+        <source media="(min-width: 1600px)"
+                srcset="plot.png">
+        <img alt="Fermentation plot of {beer}"
+             src="plot.png"
+             height="1600"
+             width="1200">
+      </picture>
+      <figcaption>{beer} Fermentation Plot</figcaption>
+    </figure>
     <div class="gravity">{gravity:.1f}&deg;P</div>
     <div class="temp">{temp:.0f}&deg;F</div>
     <table>
