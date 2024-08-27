@@ -1,20 +1,48 @@
-.gravity, .temp {
-    font: 120pt "Gill Sans", sans-serif;
+#title {
+    font: 8vw "Gill Sans", sans-serif;
 }
 
-.minor {
-    font: 24pt "Helvetica", sans-serif;
+img {
+    height: auto;
+    max-width: 100%;
 }
 
-.minor th {
-    text-align: left;
-    font-weight: normal;
+#stats {
+    display: flex;
+    align-items: center;
 }
 
-.tiny {
-    font: 12pt "Helvetica", sans-serif;
+dl {
+    display: grid;
+    grid-template-columns: max-content auto;
 }
 
-.title {
-    font: 48pt "Gill Sans", sans-serif;
+dt {
+    grid-column-start: 1;
+    margin: auto 1vw;
+}
+
+dd {
+    grid-column-start: 2;
+    margin: auto 1vw;
+}
+
+#major {
+    font: 15vw "Gill Sans", sans-serif;
+    line-height: 1.2;
+    margin: auto 3vw;
+}
+
+#major dt {
+    display: none;
+}
+
+#minor {
+    margin: 3vw;
+    font: 3vw "Helvetica", sans-serif;
+    vertical-align: middle;
+}
+
+#tiny {
+    font: 2vw "Helvetica", sans-serif;
 }

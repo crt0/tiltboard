@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="/tilt/tilt.css" />
+    <link rel="stylesheet" href="/tilt/tiltboard.css" />
     <link rel="apple-touch-icon" sizes="180x180"
           href="/tilt/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon-precomposed"
@@ -10,7 +10,7 @@
     <title>{beer}</title>
   </head>
   <body>
-    <div class="title">{beer}</div>
+    <div id="title">{beer}</div>
     <figure>
       <picture>
         <source media="(max-width: 376px)"
@@ -18,7 +18,7 @@
         <source media="(max-width: 992px)"
                 srcset="plot-992x744.png">
         <source media="(max-width: 1400px)"
-                srcset="plot-1400x1200.png">
+                srcset="plot-1400x1050.png">
         <source media="(min-width: 1600px)"
                 srcset="plot.png">
         <img alt="Fermentation plot of {beer}"
@@ -26,22 +26,25 @@
              height="1600"
              width="1200">
       </picture>
-      <figcaption>{beer} Fermentation Plot</figcaption>
     </figure>
-    <div class="gravity">{gravity:.1f}&deg;P</div>
-    <div class="temp">{temp:.0f}&deg;F</div>
-    <table>
-      <tbody class="minor">
-        <tr><th>OG:</th><td>{og:.1f}&deg;P</td></tr>
-        <tr><th>ABV:</th><td>{abv:.1f}%</td></tr>
-        <tr><th>Duration:</th><td>{duration:.1f} days</td></tr>
-        <tr><th>Attenuation:</th><td>{attenuation:.0f}%</td></tr>
-        <tr><th>Rate:</th><td>{rate:.1f}&deg;P/day</td></tr>
-        <tr><th>Plateau:</th><td>{plateau:.1f} hours</td></tr>
-      </tbody>
-    </table>
-    <div class="tiny">Last telemetry: {last_telem}</div>
-    <div class="tiny"><a href="data.txt">Data</a></div>
-    <div class="tiny"><a href="..">Other Fermentations</a></div>
+    <div id="stats">
+      <dl id="major">
+        <dt>Gravity:</dt><dd>{gravity:.1f}&deg;P</dd>
+        <dt>Temperature:</dt><dd>{temp:.0f}&deg;F</dd>
+      </dl>
+      <dl id="minor">
+        <dt>OG:</dt><dd>{og:.1f}&deg;P</dd>
+        <dt>ABV:</dt><dd>{abv:.1f}%</dd>
+        <dt>Duration:</dt><dd>{duration:.1f} days</dd>
+        <dt>Attenuation:</dt><dd>{attenuation:.0f}%</dd>
+        <dt>Rate:</dt><dd>{rate:.1f}&deg;P/day</dd>
+        <dt>Plateau:</dt><dd>{plateau:.1f} hours</dd>
+      </dl>
+    </div>
+    <div id="tiny">
+      <div>Last telemetry: {last_telem}</div>
+      <div><a href="data.txt">Data</a></div>
+      <div><a href="..">Other Fermentations</a></div>
+    </div>
   </body>
 </html>
